@@ -55,9 +55,9 @@ On a clean project mvn clean install, simply run nmvn sonar:sonar
 
 
 # Adding Profile :
-
 If you want to fix the localhost and jdbc ,you need to add the profile
 
+```sh
 <!--If profile is set you just need to hit mvn sonar:sonar-->
 <profiles>
     <profile>
@@ -77,7 +77,7 @@ If you want to fix the localhost and jdbc ,you need to add the profile
         </properties>
     </profile>
 </profiles>
-
+```
 Command to run through maven : mvn sonar:sonar
 
 
@@ -88,6 +88,8 @@ Command to run through maven : mvn sonar:sonar
 JaCoCo will generate the offline index.html in target/site/index.html,without the sonar qube server just do mvn clean package
 
 This gets executed at the test phase.
+
+```sh
 <build>
     <plugins>
           <plugin>
@@ -130,7 +132,7 @@ This gets executed at the test phase.
         </plugin>
     </plugins>
 </build>
-
+```
 Command to run through maven : mvn clean package
 
 Note : This wont publish result to sonarqube
