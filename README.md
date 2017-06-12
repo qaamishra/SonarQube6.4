@@ -22,7 +22,7 @@ Setup POM.xml ( OLD WAY)
 
 You just need to add the sonar plugin under build/plugins tag.
 
-
+<!--
 </build>
     </plugins>
         <plugin>
@@ -32,8 +32,10 @@ You just need to add the sonar plugin under build/plugins tag.
         </plugin>
     </plugins>
 </build>
+-->
 
-Command to run through maven : mvn sonar:sonar -Dsonar.jdbc:h2:tcp://localhost:9092/sonar -Dsonar.host.url=http://localhost:9090
+Command to run through maven : 
+mvn sonar:sonar -Dsonar.jdbc:h2:tcp://localhost:9092/sonar -Dsonar.host.url=http://localhost:9090
 
 
 #SonarQube Scanner for Maven (March 2017 Version)
