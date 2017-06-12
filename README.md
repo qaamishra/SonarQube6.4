@@ -5,8 +5,8 @@ Sonar plugiin for Intellj Idea
 https://plugins.jetbrains.com/idea/plugin/7238-sonarqube-community-plugin
 http://www.sonarlint.org/intellij/
 
-==========================
-Setup SonarQube server on local :
+
+# Setup SonarQube server on local 
 
 1. Download the latest sonar qube server : https://www.sonarqube.org/downloads/
 2. Unzip
@@ -17,12 +17,11 @@ Setup SonarQube server on local :
 Login admin/admin
 
 
-Setup POM.xml ( OLD WAY)
-=============================
+# Setup POM.xml ( OLD WAY)
 
 You just need to add the sonar plugin under build/plugins tag.
 
-<!--
+```sh
 </build>
     </plugins>
         <plugin>
@@ -32,30 +31,30 @@ You just need to add the sonar plugin under build/plugins tag.
         </plugin>
     </plugins>
 </build>
--->
+```
 
 Command to run through maven : 
 mvn sonar:sonar -Dsonar.jdbc:h2:tcp://localhost:9092/sonar -Dsonar.host.url=http://localhost:9090
 
 
-#SonarQube Scanner for Maven (March 2017 Version)
-============================
+# SonarQube Scanner for Maven (March 2017 Version)
+
 ( NEW WAY)
 New SonarQube (here 6.4) just need the mvn dependency
+```sh
 <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 <dependency>
     <groupId>org.sonarsource.scanner.maven</groupId>
     <artifactId>sonar-maven-plugin</artifactId>
     <version>3.3.0.603</version>
 </dependency>
-
+```
 And no plugin
 
 On a clean project mvn clean install, simply run nmvn sonar:sonar
 
 
-Adding Profile :
-============================
+# Adding Profile :
 
 If you want to fix the localhost and jdbc ,you need to add the profile
 
@@ -83,8 +82,8 @@ Command to run through maven : mvn sonar:sonar
 
 
 
-Code coverage plugin JaCoCo
-================================
+# Code coverage plugin JaCoCo
+
 
 JaCoCo will generate the offline index.html in target/site/index.html,without the sonar qube server just do mvn clean package
 
