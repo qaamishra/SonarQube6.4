@@ -133,4 +133,3 @@ This gets executed at the test phase.
 Command to run through maven : mvn clean package
 
 Note : This wont publish result to sonarqube
-
