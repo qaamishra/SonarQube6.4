@@ -15,8 +15,10 @@ Setup SonarQube server on local :
 5. Hit http://localhost:9000 and you should see the dashboard of SonarQube.
 
 Login admin/admin
-=============================
+
+
 Setup POM.xml ( OLD WAY)
+=============================
 
 You just need to add the sonar plugin under build/plugins tag.
 
@@ -48,8 +50,10 @@ New SonarQube (here 6.4) just need the mvn dependency
 And no plugin
 
 On a clean project mvn clean install, simply run nmvn sonar:sonar
-============================
+
+
 Adding Profile :
+============================
 
 If you want to fix the localhost and jdbc ,you need to add the profile
 
@@ -75,8 +79,11 @@ If you want to fix the localhost and jdbc ,you need to add the profile
 
 Command to run through maven : mvn sonar:sonar
 
-================================
+
+
 Code coverage plugin JaCoCo
+================================
+
 JaCoCo will generate the offline index.html in target/site/index.html,without the sonar qube server just do mvn clean package
 
 This gets executed at the test phase.
@@ -126,4 +133,4 @@ This gets executed at the test phase.
 Command to run through maven : mvn clean package
 
 Note : This wont publish result to sonarqube
-========================================
+
