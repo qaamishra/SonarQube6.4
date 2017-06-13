@@ -136,3 +136,6 @@ This gets executed at the test phase.
 Command to run through maven : mvn clean package
 
 Note : This wont publish result to sonarqube
+
+# Read here for more latest information
+https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven
